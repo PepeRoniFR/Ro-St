@@ -1,0 +1,25 @@
+# Compiled source #
+/sass/*
+/js/*
+
+# Node.js + Gulp #
+/node_modules/*
+gulpfile.js
+package.json
+
+# Packages #
+*.7z
+*.zip
+*.rar
+
+# Logs and databases #
+*.log
+*.sql
+*.sqlite
+
+# OS generated files #
+.DS_Store
+.DS_Store?
+.Trashes
+ehthumbs.db
+Thumbs.db
