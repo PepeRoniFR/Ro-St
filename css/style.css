@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,900");
 @font-face {
   font-family: 'icomoon';
   src: url("../fonts/icomoon/icomoon.eot?srf3rx");
@@ -407,9 +408,11 @@ body.is-loading:after {
 /* End of fancy loading effect */
 a {
   color: #F69D9D;
-  -webkit-transition: 0.5s, ease;
-  -o-transition: 0.5s, ease;
-  transition: 0.5s, ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 a:hover {
@@ -497,9 +500,11 @@ figure {
   font-size: 14px;
   margin-right: 15px;
   position: relative;
-  -webkit-transition: 0.5s, ease-in-out;
-  -o-transition: 0.5s, ease-in-out;
-  transition: 0.5s, ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .header-top .fh5co-social a:last-child {
@@ -952,6 +957,10 @@ figure {
   background: #F6FAF7;
 }
 
+.fh5co-section-white {
+  background: #fff;
+}
+
 .heading-section {
   padding-bottom: 1em;
   margin-bottom: 3em;
@@ -1129,9 +1138,11 @@ figure {
   color: #fff;
   font-size: 16px !important;
   width: 100%;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 #fh5co-started .form-control::-webkit-input-placeholder {
@@ -1225,9 +1236,11 @@ figure {
   -ms-transform: scale(1);
   -o-transform: scale(1);
   transform: scale(1);
-  -webkit-transition: 0.9s;
-  -o-transition: 0.9s;
-  transition: 0.9s;
+  -moz-transition: all 0.9s ease;
+  -o-transition: all 0.9s ease;
+  -webkit-transition: all 0.9s ease;
+  -ms-transition: all 0.9s ease;
+  transition: all 0.9s ease;
 }
 
 .gallery .gallery-img:hover img {
@@ -1264,17 +1277,25 @@ figure {
 .fh5co-blog .blog-text span {
   display: inline-block;
   margin-bottom: 20px;
-  font-size: 18px;
+  font-size: 14px;
 }
 
 .fh5co-blog .blog-text span.by {
   color: rgba(0, 0, 0, 0.5);
   margin-right: 7px;
+  etter-spacing: 0.05em;
+  /* Added by Alex */
+  font-size: 14px;
+  /* Added by Alex */
 }
 
 .fh5co-blog .blog-text span.posted_date {
   color: rgba(0, 0, 0, 0.5);
   margin-right: 7px;
+  letter-spacing: 0.05em;
+  /* Added by Alex */
+  font-size: 14px;
+  /* Added by Alex */
 }
 
 .fh5co-blog .blog-text span.comment a {
@@ -1289,7 +1310,8 @@ figure {
 .fh5co-blog .blog-text h3 {
   font-size: 20px;
   margin-bottom: 20px;
-  font-weight: 300;
+  font-weight: 500;
+  /* Original 300 - modified by Alex */
   line-height: 1.5;
   font-family: "Open Sans", Arial, sans-serif;
 }
@@ -1350,9 +1372,11 @@ figure {
 .btn {
   text-transform: uppercase;
   letter-spacing: 2px;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .btn.btn-primary {
@@ -1397,9 +1421,11 @@ figure {
 
 #fh5co-page {
   position: relative;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .fh5co-offcanvas #fh5co-page {
@@ -1509,9 +1535,11 @@ figure {
   background: #fff;
   position: absolute;
   left: 0;
-  -webkit-transition: 0.2s;
-  -o-transition: 0.2s;
-  transition: 0.2s;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .fh5co-nav-toggle.dark i {
@@ -1523,9 +1551,11 @@ figure {
 
 .fh5co-nav-toggle.dark i::before, .fh5co-nav-toggle.dark i::after {
   background: #000;
-  -webkit-transition: 0.2s;
-  -o-transition: 0.2s;
-  transition: 0.2s;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .fh5co-nav-toggle i::before {
@@ -1614,11 +1644,19 @@ figure {
 
 .row-bottom-padded-md {
   padding-bottom: 4em;
+  margin-left: 80px;
+  /* Added by Alex */
+  margin-right: 80px;
+  /* Added by Alex */
 }
 
 @media screen and (max-width: 768px) {
   .row-bottom-padded-md {
     padding-bottom: 2em;
+    margin-left: 0px;
+    /* Added by Alex */
+    margin-right: 0px;
+    /* Added by Alex */
   }
 }
 
