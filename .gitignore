@@ -2,6 +2,9 @@
 /sass/*
 /js/*
 
+# Not minified files #
+/dist/scripts.js
+
 # Node.js + Gulp #
 /node_modules/*
 gulpfile.js
