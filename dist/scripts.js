@@ -730,13 +730,13 @@ function init() {
     
     var mapOptions = {
         // How zoomed in you want the map to start at (always required)
-        zoom: 12,
+        zoom: 15,
 
         // The latitude and longitude to center the map (always required)
         center: myLatlng,
 
         // How you would like to style the map. 
-        scrollwheel: true,
+        scrollwheel: false,
         styles: [{"featureType":"administrative.land_parcel","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"landscape.man_made","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"poi","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"simplified"},{"lightness":20}]},{"featureType":"road.highway","elementType":"geometry","stylers":[{"hue":"#f49935"}]},{"featureType":"road.highway","elementType":"labels","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"hue":"#fad959"}]},{"featureType":"road.arterial","elementType":"labels","stylers":[{"visibility":"simplified"},{"lightness":20}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"visibility":"simplified"}]},{"featureType":"road.local","elementType":"labels","stylers":[{"visibility":"simplified"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"hue":"#a1cdfc"},{"saturation":30},{"lightness":49}]}]
     };
 
@@ -850,7 +850,6 @@ google.maps.event.addDomListener(window, 'load', init);
 
 	}
 
-	
 
 	// Click outside of the Mobile Menu
 	var mobileMenuOutsideClick = function() {
@@ -866,7 +865,6 @@ google.maps.event.addDomListener(window, 'load', init);
 
 
 	// Animations
-
 	var contentWayPoint = function() {
 		var i = 0;
 		$('.animate-box').waypoint( function( direction ) {
@@ -893,6 +891,8 @@ google.maps.event.addDomListener(window, 'load', init);
 		} , { offset: '85%' } );
 	};
 	
+
+	// StickyBanner
 	var stickyBanner = function() {
 		var $stickyElement = $('.sticky-banner');
 		var sticky;
@@ -904,8 +904,42 @@ google.maps.event.addDomListener(window, 'load', init);
 		}
 	};
 
+
+	// Go to Top
+var goToTop = function() {
+
+		$('.js-gotop').on('click', function(event){
+			
+			event.preventDefault();
+
+			$('html, body').animate({
+				scrollTop: $('html').offset().top
+			}, 500, 'easeInOutExpo');
+			
+			return false;
+		});
+
+		$(window).scroll(function(){
+
+			var $win = $(window);
+			if ($win.scrollTop() > 200) {
+				$('.js-top').addClass('active');
+			} else {
+				$('.js-top').removeClass('active');
+			}
+
+		});
+	
+	};
+
+
+	// Loading page
+	var loaderPage = function() {
+		$(".fh5co-loader").fadeOut("slow");
+	};
+
 	// Set the date we're counting down to
-	var countDownDate = new Date("Aug 12, 2017 16:30:00").getTime();
+	var countDownDate = new Date("Nov 26, 2017 09:00:00").getTime();
 
 	// Update the count down every 1 second
 	var x = setInterval(function() {
@@ -952,6 +986,8 @@ google.maps.event.addDomListener(window, 'load', init);
 		mobileMenuOutsideClick();
 		contentWayPoint();
 		stickyBanner();
+		goToTop();
+		loaderPage();
 	});
 
 
